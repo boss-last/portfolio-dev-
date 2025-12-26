@@ -1,0 +1,8 @@
+{
+  "name": "Full Stack Dev Portfolio",
+  "description": "A high-end, responsive developer portfolio featuring dark/light mode, French/English translation, and an AI-powered assistant.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
