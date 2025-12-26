@@ -8,12 +8,15 @@ interface SkillsProps {
 }
 
 const SkillIcon = ({ name, color }: { name: string; color: string }) => {
+  const [imgSrc, setImgSrc] = useState<string>('');
+  const [errorCount, setErrorCount] = useState(0);
+
   const slugMap: Record<string, string> = {
     "React": "react",
     "JavaScript": "javascript",
     "TypeScript": "typescript",
-    "HTML5": "html5",
-    "CSS3": "css3",
+    "HTML": "html5",
+    "CSS": "css3",
     "Bootstrap": "bootstrap",
     "jQuery": "jquery",
     "Node.js": "nodedotjs",
@@ -28,15 +31,39 @@ const SkillIcon = ({ name, color }: { name: string; color: string }) => {
   };
 
   const slug = slugMap[name] || name.toLowerCase().replace(/\s+/g, '');
-  const iconUrl = `https://cdn.simpleicons.org/${slug}/${color.replace('#', '')}`;
+  const cleanColor = color.replace('#', '');
+  
+  useEffect(() => {
+    // On essaie d'abord l'icône colorée
+    setImgSrc(`https://cdn.simpleicons.org/${slug}/${cleanColor}`);
+    setErrorCount(0);
+  }, [slug, cleanColor]);
+
+  const handleError = () => {
+    if (errorCount === 0) {
+      // Premier fallback : icône sans couleur forcée (auto-thème)
+      setImgSrc(`https://cdn.simpleicons.org/${slug}`);
+      setErrorCount(1);
+    } else if (errorCount === 1) {
+      // Deuxième fallback : Icône via un autre service (unpkg)
+      setImgSrc(`https://unpkg.com/simple-icons@latest/icons/${slug}.svg`);
+      setErrorCount(2);
+    } else {
+      // Fallback final : Initiale stylisée si tout échoue
+      setImgSrc(`https://api.dicebear.com/7.x/initials/svg?seed=${name}&backgroundColor=3b82f6&fontSize=40`);
+    }
+  };
 
   return (
-    <img 
-      src={iconUrl} 
-      alt={name} 
-      className="w-8 h-8 md:w-10 md:h-10 group-hover:scale-110 transition-transform duration-300" 
-      loading="lazy"
-    />
+    <div className="w-10 h-10 flex items-center justify-center p-1 bg-white dark:bg-gray-800 rounded-xl shadow-inner">
+      <img 
+        src={imgSrc} 
+        alt={name} 
+        onError={handleError}
+        className="max-w-full max-h-full group-hover:scale-110 transition-transform duration-300" 
+        style={{ filter: errorCount > 0 ? 'none' : 'drop-shadow(0 0 2px rgba(0,0,0,0.1))' }}
+      />
+    </div>
   );
 };
 
@@ -107,7 +134,7 @@ const Skills: React.FC<SkillsProps> = ({ lang }) => {
     <section 
       id="skills" 
       ref={sectionRef}
-      className="py-24 bg-gray-50 dark:bg-gray-900/30 transition-colors duration-300"
+      className="py-24 bg-gray-50 dark:bg-gray-900/30 transition-colors duration-300 scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
@@ -134,7 +161,7 @@ const Skills: React.FC<SkillsProps> = ({ lang }) => {
                     className="group relative p-6 rounded-3xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col space-y-4"
                   >
                     <div className="flex items-center justify-between">
-                      <div className="p-3 rounded-2xl bg-gray-50 dark:bg-gray-800 group-hover:bg-blue-50 dark:group-hover:bg-blue-900/20 transition-colors duration-300">
+                      <div className="p-2">
                         <SkillIcon name={skill.name} color={skill.color} />
                       </div>
                       <div className="text-right">

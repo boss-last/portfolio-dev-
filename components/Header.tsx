@@ -13,17 +13,31 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ lang, theme, onToggleLang, onToggleTheme }) => {
   const navLinks = {
     fr: [
-      { name: "À Propos", href: "#about" },
-      { name: "Compétences", href: "#skills" },
-      { name: "Projets", href: "#projects" },
-      { name: "Contact", href: "#contact" },
+      { name: "À Propos", id: "about" },
+      { name: "Compétences", id: "skills" },
+      { name: "Projets", id: "projects" },
+      { name: "Contact", id: "contact" },
     ],
     en: [
-      { name: "About", href: "#about" },
-      { name: "Skills", href: "#skills" },
-      { name: "Projects", href: "#projects" },
-      { name: "Contact", href: "#contact" },
+      { name: "About", id: "about" },
+      { name: "Skills", id: "skills" },
+      { name: "Projects", id: "projects" },
+      { name: "Contact", id: "contact" },
     ]
+  };
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80; // Hauteur du header
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
@@ -38,13 +52,13 @@ const Header: React.FC<HeaderProps> = ({ lang, theme, onToggleLang, onToggleThem
           
           <nav className="hidden md:flex space-x-8">
             {navLinks[lang].map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href} 
-                className="text-sm font-medium hover:text-blue-500 transition-colors"
+              <button 
+                key={link.id} 
+                onClick={() => scrollToSection(link.id)}
+                className="text-sm font-medium hover:text-blue-500 transition-colors cursor-pointer outline-none"
               >
                 {link.name}
-              </a>
+              </button>
             ))}
           </nav>
 
