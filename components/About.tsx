@@ -26,27 +26,26 @@ const About: React.FC<AboutProps> = ({ lang }) => {
     <section id="about" className="py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Image Container */}
-          <div className="relative group">
-            <div className="relative z-10 aspect-[4/5] sm:aspect-square rounded-[2rem] overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+          
+          {/* Image Container with the User's Photo */}
+          <div className="relative group flex justify-center lg:justify-start">
+            <div className="relative z-10 w-full max-w-[400px] aspect-[3/4] rounded-[3rem] overflow-hidden shadow-2xl transition-all duration-500 group-hover:scale-[1.02] border-4 border-white dark:border-gray-800">
               <img 
-                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop" 
-                alt="Alex - Full Stack Developer" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=800&auto=format&fit=crop" 
+                alt="Bamba Amara Christian" 
+                className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
               />
-              {/* Simple Overlay */}
-              <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-blue-500/10 opacity-40 group-hover:opacity-0 transition-opacity duration-500"></div>
             </div>
             
-            {/* Subtle Decorative Elements */}
-            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl -z-10"></div>
-            <div className="absolute -top-6 -left-6 w-32 h-32 border-2 border-blue-500/20 rounded-3xl -z-10 animate-float"></div>
+            <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px] -z-10 animate-pulse"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border border-blue-500/20 rounded-[4rem] -z-10 rotate-3 group-hover:rotate-0 transition-transform duration-700"></div>
           </div>
           
           {/* Content Container */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-sm font-bold text-blue-500 uppercase tracking-widest mb-3 flex items-center">
+              <h2 className="text-sm font-bold text-blue-500 uppercase tracking-[0.3em] mb-3 flex items-center">
                 <span className="w-8 h-px bg-blue-500 mr-3"></span>
                 {t.title}
               </h2>
@@ -56,23 +55,27 @@ const About: React.FC<AboutProps> = ({ lang }) => {
             </div>
             
             <div className="space-y-6 text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-              <p>
-                {t.bio1}
+              <p className="font-medium text-gray-800 dark:text-gray-200">
+                Bonjour, je suis Bamba Amara Christian. {t.bio1}
               </p>
               <p>
                 {t.bio2}
               </p>
             </div>
 
-            {/* Simple Tech Tags */}
-            <div className="pt-4 flex flex-wrap gap-3">
-               {['React', 'Node.js', 'Laravel', 'Python'].map((tech) => (
-                 <span key={tech} className="px-4 py-2 bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl text-xs font-bold text-gray-500">
-                   #{tech}
-                 </span>
-               ))}
+            {/* Tech Stack Highlights */}
+            <div className="pt-6 grid grid-cols-2 gap-4">
+              <div className="p-4 rounded-2xl bg-gray-50 dark:bg-gray-900/50 border border-gray-100 dark:border-gray-800">
+                <p className="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-1">Frontend</p>
+                <p className="text-sm font-bold">React / Next.js / Tailwind</p>
+              </div>
+              <div className="p-4 rounded-2xl bg-gray-50 dark:bg-gray-900/50 border border-gray-100 dark:border-gray-800">
+                <p className="text-[10px] font-black text-teal-500 uppercase tracking-widest mb-1">Backend</p>
+                <p className="text-sm font-bold">Node.js / Laravel / Python</p>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

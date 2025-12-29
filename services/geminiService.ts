@@ -7,7 +7,7 @@ export const askAssistant = async (question: string, language: 'fr' | 'en') => {
   const model = "gemini-3-flash-preview";
   const systemInstruction = `
     You are an AI assistant for a Full Stack Developer's portfolio. 
-    The developer's name is Alex. 
+    The developer's name is Bamba Amara Christian. 
     Skills: React, Node.js, PHP, Laravel, Python, MySQL, MongoDB, Tailwind.
     Tools: VS Code, Cursor, Git.
     Be professional, helpful, and answer in ${language === 'fr' ? 'French' : 'English'}.

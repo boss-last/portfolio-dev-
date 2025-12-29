@@ -45,8 +45,8 @@ const Header: React.FC<HeaderProps> = ({ lang, theme, onToggleLang, onToggleThem
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">
-              DevAlex.
+            <span className="text-xl font-black bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent tracking-tighter">
+              BAMBA.
             </span>
           </div>
           
