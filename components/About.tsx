@@ -27,17 +27,24 @@ const About: React.FC<AboutProps> = ({ lang }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
-          {/* Image Container with the User's Photo */}
+          {/* Image Container with Bamba Amara Christian's Photo */}
           <div className="relative group flex justify-center lg:justify-start">
             <div className="relative z-10 w-full max-w-[400px] aspect-[3/4] rounded-[3rem] overflow-hidden shadow-2xl transition-all duration-500 group-hover:scale-[1.02] border-4 border-white dark:border-gray-800">
               <img 
-                src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=800&auto=format&fit=crop" 
+                src="https://raw.githubusercontent.com/stackblitz/stackblitz-images/main/bamba-profile.jpg" 
                 alt="Bamba Amara Christian" 
-                className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover grayscale-[10%] group-hover:grayscale-0 transition-all duration-700"
+                style={{ objectPosition: 'center 20%' }}
+                onError={(e) => {
+                  // Fallback to the original user image if the direct link isn't ready
+                  (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop";
+                }}
               />
-              <div className="absolute inset-0 bg-blue-500/10 opacity-40 group-hover:opacity-0 transition-opacity duration-500"></div>
+              {/* Overlay gradient for depth */}
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-60 group-hover:opacity-0 transition-opacity duration-500"></div>
             </div>
             
+            {/* Decorative Background Elements */}
             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px] -z-10 animate-pulse"></div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border border-blue-500/20 rounded-[4rem] -z-10 rotate-3 group-hover:rotate-0 transition-transform duration-700"></div>
           </div>
@@ -67,11 +74,11 @@ const About: React.FC<AboutProps> = ({ lang }) => {
             <div className="pt-6 grid grid-cols-2 gap-4">
               <div className="p-4 rounded-2xl bg-gray-50 dark:bg-gray-900/50 border border-gray-100 dark:border-gray-800">
                 <p className="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-1">Frontend</p>
-                <p className="text-sm font-bold">React / Next.js / Tailwind</p>
+                <p className="text-sm font-bold text-gray-900 dark:text-white">React / Next.js / Tailwind</p>
               </div>
               <div className="p-4 rounded-2xl bg-gray-50 dark:bg-gray-900/50 border border-gray-100 dark:border-gray-800">
                 <p className="text-[10px] font-black text-teal-500 uppercase tracking-widest mb-1">Backend</p>
-                <p className="text-sm font-bold">Node.js / Laravel / Python</p>
+                <p className="text-sm font-bold text-gray-900 dark:text-white">Node.js / Laravel / Python</p>
               </div>
             </div>
           </div>
