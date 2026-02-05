@@ -27,29 +27,28 @@ const SkillIcon = ({ name, color }: { name: string; color: string }) => {
     "MongoDB": "mongodb",
     "VS Code": "visualstudiocode",
     "Cursor": "cursor",
-    "Git": "git"
+    "Git": "git",
+    "C++": "cplusplus",
+    "Power BI": "powerbi",
+    "XML": "xml"
   };
 
   const slug = slugMap[name] || name.toLowerCase().replace(/\s+/g, '');
   const cleanColor = color.replace('#', '');
   
   useEffect(() => {
-    // On essaie d'abord l'icône colorée
     setImgSrc(`https://cdn.simpleicons.org/${slug}/${cleanColor}`);
     setErrorCount(0);
   }, [slug, cleanColor]);
 
   const handleError = () => {
     if (errorCount === 0) {
-      // Premier fallback : icône sans couleur forcée (auto-thème)
       setImgSrc(`https://cdn.simpleicons.org/${slug}`);
       setErrorCount(1);
     } else if (errorCount === 1) {
-      // Deuxième fallback : Icône via un autre service (unpkg)
       setImgSrc(`https://unpkg.com/simple-icons@latest/icons/${slug}.svg`);
       setErrorCount(2);
     } else {
-      // Fallback final : Initiale stylisée si tout échoue
       setImgSrc(`https://api.dicebear.com/7.x/initials/svg?seed=${name}&backgroundColor=3b82f6&fontSize=40`);
     }
   };
@@ -69,15 +68,15 @@ const SkillIcon = ({ name, color }: { name: string; color: string }) => {
 
 const getLevelLabel = (level: number, lang: Language) => {
   if (lang === 'fr') {
-    if (level >= 90) return "Expert";
-    if (level >= 75) return "Avancé";
-    if (level >= 50) return "Intermédiaire";
-    return "Débutant";
+    if (level >= 95) return "Expert / Maîtrisé";
+    if (level >= 85) return "Très Bien";
+    if (level >= 70) return "Intermédiaire";
+    return "En Apprentissage";
   } else {
-    if (level >= 90) return "Expert";
-    if (level >= 75) return "Advanced";
-    if (level >= 50) return "Intermediate";
-    return "Beginner";
+    if (level >= 95) return "Expert / Mastered";
+    if (level >= 85) return "Advanced";
+    if (level >= 70) return "Intermediate";
+    return "Learning";
   }
 };
 
@@ -114,8 +113,8 @@ const Skills: React.FC<SkillsProps> = ({ lang }) => {
       proficiency: "Maîtrise",
       categories: {
         frontend: "Frontend",
-        backend: "Backend",
-        tool: "Outils & Dev"
+        backend: "Backend & Système",
+        tool: "Outils & Data"
       }
     },
     en: {
@@ -124,8 +123,8 @@ const Skills: React.FC<SkillsProps> = ({ lang }) => {
       proficiency: "Proficiency",
       categories: {
         frontend: "Frontend",
-        backend: "Backend",
-        tool: "Tools & Dev"
+        backend: "Backend & Systems",
+        tool: "Tools & Data"
       }
     }
   }[lang];
