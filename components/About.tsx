@@ -24,7 +24,7 @@ const About: React.FC<AboutProps> = ({ lang }) => {
 
   // URL d'image haute disponibilité (Unsplash)
   // Conseil : Pour utiliser votre propre photo, hébergez-la sur un site comme Imgur ou utilisez votre lien GitHub/LinkedIn direct
-  const profileImageUrl = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop";
+  const profileImageUrl = "https://github.com/boss-last/portfolio-dev-/blob/main/components/PHOTO.jpg";
 
   return (
     <section id="about" className="py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
