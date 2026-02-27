@@ -4,75 +4,90 @@ import { Project, Skill } from './types';
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: { fr: "LaraShop - Plateforme E-commerce", en: "LaraShop - E-commerce Platform" },
+    title: { fr: "Plateforme SaaS Next.js", en: "Next.js SaaS Platform" },
     description: { 
-      fr: "Une application e-commerce complète développée avec Laravel. Inclus la gestion du catalogue, un panier d'achat AJAX, et un système de paiement Stripe intégré. Dashboard admin pour la gestion des stocks et des commandes.", 
-      en: "A full-scale e-commerce application built with Laravel. Includes catalog management, AJAX cart system, and Stripe payment integration. Admin dashboard for stock and order management." 
+      fr: "Une application SaaS moderne utilisant Next.js pour le SEO et la performance, avec une base de données MongoDB et une interface stylisée avec Tailwind CSS.", 
+      en: "A modern SaaS application using Next.js for SEO and performance, with a MongoDB database and a UI styled with Tailwind CSS." 
     },
-    tech: ["PHP", "Laravel", "MySQL", "Bootstrap", "jQuery"],
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1200",
+    tech: ["Next.js", "React.js", "Tailwind CSS", "TypeScript", "MongoDB"],
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     github: "https://github.com",
-    demo: "https://laravel.com"
+    demo: "#"
   },
   {
     id: 2,
-    title: { fr: "TaskFlow Manager - SaaS", en: "TaskFlow Manager - SaaS" },
+    title: { fr: "E-commerce Laravel Expert", en: "Laravel E-commerce Expert" },
     description: { 
-      fr: "Outil de gestion de tâches d'équipe en temps réel. Utilise React pour l'interface dynamique et Node.js/Socket.io pour les mises à jour instantanées. Stockage des données flexible avec MongoDB.", 
-      en: "Real-time team task management tool. Uses React for the dynamic UI and Node.js/Socket.io for instant updates. Flexible data storage with MongoDB." 
+      fr: "Système de vente en ligne complet développé avec Laravel et PHP. Interface responsive avec Bootstrap et interactions dynamiques via jQuery.", 
+      en: "Complete online sales system developed with Laravel and PHP. Responsive interface with Bootstrap and dynamic interactions via jQuery." 
     },
-    tech: ["React", "Node.js", "MongoDB", "JavaScript"],
-    image: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&q=80&w=1200",
+    tech: ["Laravel", "PHP", "SQL", "Bootstrap", "jQuery"],
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1200",
     github: "https://github.com",
-    demo: "https://react.dev"
+    demo: "#"
   },
   {
     id: 3,
-    title: { fr: "DataSpy - Scraper Intelligent", en: "DataSpy - Intelligent Scraper" },
+    title: { fr: "Système d'Analyse de Données", en: "Data Analysis System" },
     description: { 
-      fr: "Un puissant moteur de collecte de données automatisé conçu en Python. Interface utilisateur intuitive avec jQuery pour configurer les cibles de scraping et exporter les données en JSON/CSV.", 
-      en: "A powerful automated data collection engine built in Python. Intuitive UI with jQuery to configure scraping targets and export data in JSON/CSV formats." 
+      fr: "Application de traitement de données massives combinant Java pour la robustesse du backend et Python pour l'analyse statistique avancée et le machine learning.", 
+      en: "Massive data processing application combining Java for backend robustness and Python for advanced statistical analysis and machine learning." 
     },
-    tech: ["Python", "jQuery", "HTML", "CSS"],
+    tech: ["Java", "Python", "SQL", "Node.js", "Git"],
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     github: "https://github.com",
-    demo: "https://www.python.org"
+    demo: "#"
   },
   {
     id: 4,
-    title: { fr: "DevSync Cloud IDE", en: "DevSync Cloud IDE" },
+    title: { fr: "Real-time Dev Tool", en: "Real-time Dev Tool" },
     description: { 
-      fr: "Environnement de développement collaboratif dans le cloud. Permet l'édition de code en direct à plusieurs. Architecture robuste sous React et TypeScript avec un backend Node.js scalable.", 
-      en: "Collaborative development environment in the cloud. Allows multi-user live code editing. Robust architecture using React and TypeScript with a scalable Node.js backend." 
+      fr: "Outil de collaboration en temps réel pour développeurs utilisant Node.js et TypeScript. Intégration fluide avec Git et GitHub pour le suivi des versions.", 
+      en: "Real-time collaboration tool for developers using Node.js and TypeScript. Seamless integration with Git and GitHub for version tracking." 
     },
-    tech: ["React", "TypeScript", "Node.js", "Tailwind"],
+    tech: ["Node.js", "TypeScript", "JavaScript", "Git", "GitHub"],
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
     github: "https://github.com",
-    demo: "https://typescriptlang.org"
+    demo: "#"
+  },
+  {
+    id: 5,
+    title: { fr: "Passerelle de Paiement Stripe", en: "Stripe Payment Gateway" },
+    description: { 
+      fr: "Intégration complète d'une passerelle de paiement sécurisée utilisant Stripe, PHP et SQL. Interface utilisateur optimisée avec HTML5 et CSS3.", 
+      en: "Complete integration of a secure payment gateway using Stripe, PHP, and SQL. User interface optimized with HTML5 and CSS3." 
+    },
+    tech: ["PHP", "SQL", "HTML5", "CSS3", "Windsurf"],
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=1200",
+    github: "https://github.com",
+    demo: "#"
   }
 ];
 
 export const SKILLS: Skill[] = [
-  // Maîtrise Très Bien (95-100%)
-  { name: "HTML", category: "frontend", color: "#E34F26", icon: "html5", level: 100 },
-  { name: "CSS", category: "frontend", color: "#1572B6", icon: "css3", level: 98 },
-  { name: "PHP", category: "backend", color: "#777BB4", icon: "php", level: 98 },
-  { name: "Bootstrap", category: "frontend", color: "#7952B3", icon: "bootstrap", level: 95 },
-  { name: "jQuery", category: "frontend", color: "#0769AD", icon: "jquery", level: 95 },
-  { name: "XML", category: "tool", color: "#FFA500", icon: "xml", level: 95 },
-  { name: "C++", category: "backend", color: "#00599C", icon: "cplusplus", level: 95 },
+  // Frontend
+  { name: "HTML5", category: "frontend", color: "#E34F26", icon: "html5", level: 100 },
+  { name: "CSS3", category: "frontend", color: "#1572B6", icon: "css3", level: 98 },
+  { name: "JavaScript", category: "frontend", color: "#F7DF1E", icon: "javascript", level: 95 },
+  { name: "React.js", category: "frontend", color: "#61DAFB", icon: "react", level: 98 },
+  { name: "Next.js", category: "frontend", color: "#000000", icon: "nextdotjs", level: 90 },
+  { name: "Tailwind CSS", category: "frontend", color: "#06B6D4", icon: "tailwindcss", level: 95 },
+  { name: "TypeScript", category: "frontend", color: "#3178C6", icon: "typescript", level: 92 },
+  { name: "Node.js", category: "backend", color: "#339933", icon: "nodedotjs", level: 85 },
 
-  // Maîtrise Un Peu (60-75%)
-  { name: "React", category: "frontend", color: "#61DAFB", icon: "react", level: 65 },
-  { name: "Node.js", category: "backend", color: "#339933", icon: "nodedotjs", level: 68 },
-  { name: "TypeScript", category: "frontend", color: "#3178C6", icon: "typescript", level: 60 },
-  { name: "Tailwind", category: "frontend", color: "#06B6D4", icon: "tailwindcss", level: 72 },
-  { name: "Python", category: "backend", color: "#3776AB", icon: "python", level: 65 },
-  { name: "MySQL", category: "backend", color: "#4479A1", icon: "mysql", level: 75 },
-  { name: "Laravel", category: "backend", color: "#FF2D20", icon: "laravel", level: 70 },
-  { name: "Power BI", category: "tool", color: "#F2C811", icon: "powerbi", level: 60 },
+  // Backend & Frameworks
+  { name: "Python", category: "backend", color: "#3776AB", icon: "python", level: 95 },
+  { name: "SQL", category: "backend", color: "#4479A1", icon: "mysql", level: 92 },
+  { name: "Java", category: "backend", color: "#007396", icon: "java", level: 80 },
+  { name: "PHP", category: "backend", color: "#777BB4", icon: "php", level: 85 },
+  { name: "MongoDB", category: "backend", color: "#47A248", icon: "mongodb", level: 88 },
+  { name: "Laravel", category: "backend", color: "#FF2D20", icon: "laravel", level: 85 },
+  { name: "Bootstrap", category: "frontend", color: "#7952B3", icon: "bootstrap", level: 90 },
+  { name: "jQuery", category: "frontend", color: "#0769AD", icon: "jquery", level: 85 },
 
-  // Autres Outils
-  { name: "Git", category: "tool", color: "#F05032", icon: "git", level: 88 },
-  { name: "VS Code", category: "tool", color: "#007ACC", icon: "visualstudiocode", level: 95 }
+  // Outils / Dev
+  { name: "VS Code", category: "tool", color: "#007ACC", icon: "visualstudiocode", level: 95 },
+  { name: "Git", category: "tool", color: "#F05032", icon: "git", level: 92 },
+  { name: "GitHub", category: "tool", color: "#181717", icon: "github", level: 95 },
+  { name: "Windsurf", category: "tool", color: "#00A3E0", icon: "windsurf", level: 80 }
 ];

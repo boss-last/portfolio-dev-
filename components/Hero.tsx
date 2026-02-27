@@ -11,15 +11,15 @@ const Hero: React.FC<HeroProps> = ({ lang }) => {
   const content = {
     fr: {
       greeting: "Salut, je suis",
-      role: "Développeur Full Stack",
-      desc: "Je conçois et développe des applications web robustes, scalables et esthétiques en utilisant les dernières technologies du marché.",
+      role: "Développeur Fullstack / Data",
+      desc: "Je conçois et développe des applications web performantes et des solutions d'analyse de données robustes, alliant design moderne et puissance de traitement.",
       cta: "Voir mes projets",
       badge: "Disponible pour de nouveaux défis"
     },
     en: {
       greeting: "Hi, I am",
-      role: "Full Stack Developer",
-      desc: "I design and develop robust, scalable, and beautiful web applications using the latest market technologies.",
+      role: "Fullstack / Data Developer",
+      desc: "I design and develop high-performance web applications and robust data analysis solutions, combining modern design with processing power.",
       cta: "View My Projects",
       badge: "Open to new opportunities"
     }
@@ -105,11 +105,11 @@ const Hero: React.FC<HeroProps> = ({ lang }) => {
                 </div>
                 <div className="pl-6 flex space-x-2">
                   <span className="text-gray-400">role:</span>
-                  <span className="text-orange-400">'Full Stack'</span>,
+                  <span className="text-orange-400">'Fullstack / Data'</span>,
                 </div>
                 <div className="pl-6 flex space-x-2">
                   <span className="text-gray-400">focus:</span>
-                  <span className="text-orange-400">'Modern Web'</span>,
+                  <span className="text-orange-400">'Web & Data'</span>,
                 </div>
                 <div className="pl-6 flex space-x-2">
                   <span className="text-gray-400">coffee:</span>

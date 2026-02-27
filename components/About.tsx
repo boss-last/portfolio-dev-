@@ -11,20 +11,20 @@ const About: React.FC<AboutProps> = ({ lang }) => {
     fr: {
       title: "À Propos",
       subtitle: "Qui suis-je ?",
-      bio1: "En tant que développeur full-stack passionné, je m'épanouis en transformant des problèmes complexes en expériences numériques élégantes et interactives. Avec une base solide dans les technologies front-end et back-end, je donne vie aux idées, du concept au déploiement.",
-      bio2: "Mon parcours dans le développement web est motivé par l'amour du code propre, du design centré sur l'utilisateur et de l'apprentissage continu. Je suis apte à travailler sur l'ensemble de la pile, de la création d'interfaces utilisateur réactives à l'architecture de logiques serveur complexes en PHP et C++."
+      bio1: "Développeur Fullstack / Data passionné par la création de solutions web complètes et l'exploitation intelligente des données. Je maîtrise l'ensemble du cycle de développement, du front-end interactif au back-end robuste.",
+      bio2: "Avec une expertise variée allant de React et Next.js à Python, Java et Laravel, je construis des applications scalables et des architectures de données performantes. Mon approche combine rigueur technique et vision produit pour transformer des concepts complexes en réalités numériques tangibles."
     },
     en: {
       title: "About Me",
       subtitle: "Who am I?",
-      bio1: "As a passionate full-stack developer, I thrive on turning complex problems into elegant and interactive digital experiences. With a solid foundation in both front-end and back-end technologies, I bring ideas to life from concept to deployment.",
-      bio2: "My journey in web development is driven by a love for clean code, user-centered design, and continuous learning. I am proficient in working across the entire stack, from building responsive interfaces to architecting complex server logic in PHP and C++."
+      bio1: "Fullstack / Data Developer passionate about creating complete web solutions and intelligent data exploitation. I master the entire development cycle, from interactive front-end to robust back-end.",
+      bio2: "With varied expertise ranging from React and Next.js to Python, Java, and Laravel, I build scalable applications and high-performance data architectures. My approach combines technical rigor and product vision to transform complex concepts into tangible digital realities."
     }
   }[lang];
 
   // URL d'image haute disponibilité (Unsplash)
   // Conseil : Pour utiliser votre propre photo, hébergez-la sur un site comme Imgur ou utilisez votre lien GitHub/LinkedIn direct
-  const profileImageUrl = "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=800&auto=format&fit=crop";
+  const profileImageUrl = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop";
 
   return (
     <section id="about" className="py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
@@ -76,12 +76,12 @@ const About: React.FC<AboutProps> = ({ lang }) => {
             {/* Tech Stack Highlights */}
             <div className="pt-6 grid grid-cols-2 gap-4">
               <div className="p-4 rounded-2xl bg-gray-50 dark:bg-gray-900/50 border border-gray-100 dark:border-gray-800">
-                <p className="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-1">Frontend Expert</p>
-                <p className="text-sm font-bold text-gray-900 dark:text-white">HTML / CSS / Bootstrap / jQuery</p>
+                <p className="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-1">Fullstack Web</p>
+                <p className="text-sm font-bold text-gray-900 dark:text-white">React / Next.js / Node.js / Laravel</p>
               </div>
               <div className="p-4 rounded-2xl bg-gray-50 dark:bg-gray-900/50 border border-gray-100 dark:border-gray-800">
-                <p className="text-[10px] font-black text-teal-500 uppercase tracking-widest mb-1">Backend & Systems</p>
-                <p className="text-sm font-bold text-gray-900 dark:text-white">PHP / C++ / XML / Laravel</p>
+                <p className="text-[10px] font-black text-teal-500 uppercase tracking-widest mb-1">Data & Systems</p>
+                <p className="text-sm font-bold text-gray-900 dark:text-white">Python / SQL / Java / MongoDB</p>
               </div>
             </div>
           </div>

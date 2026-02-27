@@ -101,7 +101,9 @@ const LaraShopDemo: React.FC<LaraShopDemoProps> = ({ onClose, lang }) => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {products.map(p => (
                 <div key={p.id} className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col">
-                  <img src={p.image} className="w-full h-32 object-cover rounded-xl mb-4" alt={p.name} />
+                  {p.image && (
+                    <img src={p.image} className="w-full h-32 object-cover rounded-xl mb-4" alt={p.name} />
+                  )}
                   <h4 className="font-bold mb-1">{p.name}</h4>
                   <p className="text-blue-600 font-black mb-4">${p.price}</p>
                   <button 
@@ -172,7 +174,9 @@ const LaraShopDemo: React.FC<LaraShopDemoProps> = ({ onClose, lang }) => {
               ) : (
                 cart.map(item => (
                   <div key={item.id} className="flex items-center space-x-3 bg-gray-50 dark:bg-gray-900 p-3 rounded-xl">
+                  {products.find(p => p.id === item.id)?.image && (
                     <img src={products.find(p => p.id === item.id)?.image} className="w-12 h-12 object-cover rounded-lg" />
+                  )}
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-bold truncate">{item.name}</p>
                       <p className="text-xs text-blue-500">${item.price}</p>

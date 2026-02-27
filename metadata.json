@@ -1,6 +1,6 @@
 {
-  "name": "Bamba Amara Christian - Full Stack Portfolio",
-  "description": "Portfolio haut de gamme de Bamba Amara Christian, développeur full-stack. Inclus mode sombre/clair, traduction FR/EN et assistant IA.",
+  "name": "Bamba Amara Christian - Fullstack / Data Portfolio",
+  "description": "Portfolio haut de gamme de Bamba Amara Christian, développeur Fullstack et Data. Inclus mode sombre/clair, traduction FR/EN et assistant IA.",
   "requestFramePermissions": [
     "camera",
     "microphone"

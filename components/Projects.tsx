@@ -64,8 +64,8 @@ const Projects: React.FC<ProjectsProps> = ({ lang }) => {
     // Intercept demo clicks for projects with interactive simulations
     if ([1, 2, 3, 4, 5].includes(projectId)) {
       e.preventDefault();
-      if (projectId === 1) setShowLaraDemo(true);
-      if (projectId === 2) setShowTaskFlowDemo(true);
+      if (projectId === 1) setShowTaskFlowDemo(true);
+      if (projectId === 2) setShowLaraDemo(true);
       if (projectId === 3) setShowDataSpyDemo(true);
       if (projectId === 4) setShowDevSyncDemo(true);
       if (projectId === 5) setShowPaymentGateDemo(true);
@@ -116,14 +116,16 @@ const Projects: React.FC<ProjectsProps> = ({ lang }) => {
               className="group relative flex flex-col rounded-3xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden"
             >
               <div className="relative aspect-video overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title[lang]} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800';
-                  }}
-                />
+                {project.image && (
+                  <img 
+                    src={project.image} 
+                    alt={project.title[lang]} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800';
+                    }}
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-60"></div>
               </div>
 

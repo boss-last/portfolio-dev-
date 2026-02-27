@@ -8,15 +8,17 @@ interface SkillsProps {
 }
 
 const SkillIcon = ({ name, color }: { name: string; color: string }) => {
-  const [imgSrc, setImgSrc] = useState<string>('');
+  const [imgSrc, setImgSrc] = useState<string | null>(null);
   const [errorCount, setErrorCount] = useState(0);
 
   const slugMap: Record<string, string> = {
-    "React": "react",
+    "React.js": "react",
     "JavaScript": "javascript",
     "TypeScript": "typescript",
-    "HTML": "html5",
-    "CSS": "css3",
+    "HTML5": "html5",
+    "CSS3": "css3",
+    "Next.js": "nextdotjs",
+    "Tailwind CSS": "tailwindcss",
     "Bootstrap": "bootstrap",
     "jQuery": "jquery",
     "Node.js": "nodedotjs",
@@ -28,9 +30,13 @@ const SkillIcon = ({ name, color }: { name: string; color: string }) => {
     "VS Code": "visualstudiocode",
     "Cursor": "cursor",
     "Git": "git",
-    "C++": "cplusplus",
+    "GitHub": "github",
+    "Java": "java",
     "Power BI": "powerbi",
-    "XML": "xml"
+    "XML": "xml",
+    "D3.js": "d3dotjs",
+    "SQL": "mysql",
+    "Windsurf": "windsurf"
   };
 
   const slug = slugMap[name] || name.toLowerCase().replace(/\s+/g, '');
@@ -55,13 +61,15 @@ const SkillIcon = ({ name, color }: { name: string; color: string }) => {
 
   return (
     <div className="w-10 h-10 flex items-center justify-center p-1 bg-white dark:bg-gray-800 rounded-xl shadow-inner">
-      <img 
-        src={imgSrc} 
-        alt={name} 
-        onError={handleError}
-        className="max-w-full max-h-full group-hover:scale-110 transition-transform duration-300" 
-        style={{ filter: errorCount > 0 ? 'none' : 'drop-shadow(0 0 2px rgba(0,0,0,0.1))' }}
-      />
+      {imgSrc && (
+        <img 
+          src={imgSrc} 
+          alt={name} 
+          onError={handleError}
+          className="max-w-full max-h-full group-hover:scale-110 transition-transform duration-300" 
+          style={{ filter: errorCount > 0 ? 'none' : 'drop-shadow(0 0 2px rgba(0,0,0,0.1))' }}
+        />
+      )}
     </div>
   );
 };
