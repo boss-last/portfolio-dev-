@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Language, Theme } from './types';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -47,6 +48,7 @@ const App: React.FC = () => {
       </main>
       <Footer lang={lang} />
       <ScrollToTop />
+      <Analytics />
     </div>
   );
 };
