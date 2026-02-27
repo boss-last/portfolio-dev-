@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import ContactAssistant from './components/ContactAssistant';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import { Analytics } from '@vercel/analytics/react';
 
 const App: React.FC = () => {
   const [lang, setLang] = useState<Language>('fr');
@@ -47,6 +48,7 @@ const App: React.FC = () => {
       </main>
       <Footer lang={lang} />
       <ScrollToTop />
+      <Analytics />
     </div>
   );
 };
