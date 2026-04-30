@@ -11,8 +11,8 @@ export const PROJECTS: Project[] = [
     },
     tech: ["React.js", "Node.js", "Express.js", "MySQL"],
     image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1200",
-    github: "https://github.com/boss-last/ecommerce-fullstack",
-    demo: "#"
+    github: "https://github.com/boss-last/portfolio-dev-/tree/main/portfolio_projects_source/ecommerce-fullstack",
+    demo: "/#/demo/ecommerce"
   },
   {
     id: 2,
@@ -23,8 +23,8 @@ export const PROJECTS: Project[] = [
     },
     tech: ["Angular", "Node.js", "Express.js", "MariaDB"],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-    github: "https://github.com/boss-last/project-management-app",
-    demo: "#"
+    github: "https://github.com/boss-last/portfolio-dev-/tree/main/portfolio_projects_source/project-management-app",
+    demo: "/#/demo/project-management"
   },
   {
     id: 3,
@@ -35,8 +35,8 @@ export const PROJECTS: Project[] = [
     },
     tech: ["Laravel", "PHP", "MySQL", "React.js"],
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    github: "https://github.com/boss-last/laravel-enterprise-portal",
-    demo: "#"
+    github: "https://github.com/boss-last/portfolio-dev-/tree/main/portfolio_projects_source/laravel-enterprise-portal",
+    demo: "/#/demo/laravel-portal"
   },
   {
     id: 4,
@@ -47,8 +47,8 @@ export const PROJECTS: Project[] = [
     },
     tech: ["Python", "Pandas", "Jupyter", "Excel"],
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    github: "https://github.com/boss-last/superstore-sales-analysis",
-    demo: "#"
+    github: "https://github.com/boss-last/portfolio-dev-/tree/main/portfolio_projects_source/superstore-sales-analysis",
+    demo: "/#/demo/superstore-analysis"
   },
   {
     id: 5,
@@ -59,35 +59,46 @@ export const PROJECTS: Project[] = [
     },
     tech: ["Power BI", "Excel", "Python"],
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=1200",
-    github: "https://github.com/boss-last/marketing-analysis-dashboard",
-    demo: "#"
+    github: "https://github.com/boss-last/portfolio-dev-/tree/main/portfolio_projects_source/marketing-analysis-dashboard",
+    demo: "/#/demo/marketing-dashboard"
   }
 ];
 
 export const SKILLS: Skill[] = [
+  // Fullstack (architecture, APIs, workflow)
+  { name: "TypeScript", category: "fullstack", color: "#3178C6", icon: "typescript", level: 92 },
+  { name: "Node.js", category: "fullstack", color: "#339933", icon: "nodedotjs", level: 88 },
+  { name: "Express.js", category: "fullstack", color: "#000000", icon: "express", level: 85 },
+  { name: "Git", category: "fullstack", color: "#F05032", icon: "git", level: 92 },
+
   // Frontend
   { name: "HTML5", category: "frontend", color: "#E34F26", icon: "html5", level: 100 },
   { name: "CSS3", category: "frontend", color: "#1572B6", icon: "css3", level: 98 },
   { name: "JavaScript", category: "frontend", color: "#F7DF1E", icon: "javascript", level: 95 },
+  { name: "Angular", category: "frontend", color: "#0F0F11", icon: "angular", level: 95 },
   { name: "React.js", category: "frontend", color: "#61DAFB", icon: "react", level: 98 },
+  { name: "Vue.js", category: "frontend", color: "#4FC08D", icon: "vuedotjs", level: 95 },
   { name: "Next.js", category: "frontend", color: "#000000", icon: "nextdotjs", level: 90 },
   { name: "Tailwind CSS", category: "frontend", color: "#06B6D4", icon: "tailwindcss", level: 95 },
-  { name: "TypeScript", category: "frontend", color: "#3178C6", icon: "typescript", level: 92 },
-  { name: "Node.js", category: "backend", color: "#339933", icon: "nodedotjs", level: 85 },
-
-  // Backend & Frameworks
-  { name: "Python", category: "backend", color: "#3776AB", icon: "python", level: 95 },
-  { name: "SQL", category: "backend", color: "#4479A1", icon: "mysql", level: 92 },
-  { name: "Java", category: "backend", color: "#007396", icon: "java", level: 80 },
-  { name: "PHP", category: "backend", color: "#777BB4", icon: "php", level: 85 },
-  { name: "MongoDB", category: "backend", color: "#47A248", icon: "mongodb", level: 88 },
-  { name: "Laravel", category: "backend", color: "#FF2D20", icon: "laravel", level: 85 },
   { name: "Bootstrap", category: "frontend", color: "#7952B3", icon: "bootstrap", level: 90 },
   { name: "jQuery", category: "frontend", color: "#0769AD", icon: "jquery", level: 85 },
 
-  // Outils / Dev
-  { name: "VS Code", category: "tool", color: "#007ACC", icon: "visualstudiocode", level: 95 },
-  { name: "Git", category: "tool", color: "#F05032", icon: "git", level: 92 },
-  { name: "GitHub", category: "tool", color: "#181717", icon: "github", level: 95 },
-  { name: "Windsurf", category: "tool", color: "#00A3E0", icon: "windsurf", level: 80 }
+  // Backend
+  { name: "Python", category: "backend", color: "#3776AB", icon: "python", level: 95 },
+  { name: "Java", category: "backend", color: "#007396", icon: "java", level: 80 },
+  { name: "PHP", category: "backend", color: "#777BB4", icon: "php", level: 85 },
+  { name: "Laravel", category: "backend", color: "#FF2D20", icon: "laravel", level: 85 },
+  { name: "MySQL", category: "backend", color: "#4479A1", icon: "mysql", level: 92 },
+  { name: "MariaDB", category: "backend", color: "#003545", icon: "mariadb", level: 95 },
+  { name: "MongoDB", category: "backend", color: "#47A248", icon: "mongodb", level: 88 },
+
+  // Data & Outils
+  { name: "Power BI", category: "data", color: "#F2C811", icon: "powerbi", level: 95 },
+  { name: "Excel", category: "data", color: "#217346", icon: "microsoftexcel", level: 95 },
+  { name: "Pandas", category: "data", color: "#150458", icon: "pandas", level: 95 },
+  { name: "Jupyter", category: "data", color: "#F37626", icon: "jupyter", level: 90 },
+  { name: "VS Code", category: "data", color: "#007ACC", icon: "visualstudiocode", level: 95 },
+  { name: "GitHub", category: "data", color: "#181717", icon: "github", level: 95 },
+  { name: "Windsurf", category: "data", color: "#00A3E0", icon: "windsurf", level: 80 },
+  { name: "Docker", category: "data", color: "#2496ED", icon: "docker", level: 85 },
 ];

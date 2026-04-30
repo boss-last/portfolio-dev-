@@ -12,11 +12,13 @@ const SkillIcon = ({ name, color }: { name: string; color: string }) => {
   const [errorCount, setErrorCount] = useState(0);
 
   const slugMap: Record<string, string> = {
+    "Angular": "angular",
     "React.js": "react",
     "JavaScript": "javascript",
     "TypeScript": "typescript",
     "HTML5": "html5",
     "CSS3": "css3",
+    "Vue.js": "vuedotjs",
     "Next.js": "nextdotjs",
     "Tailwind CSS": "tailwindcss",
     "Bootstrap": "bootstrap",
@@ -26,6 +28,7 @@ const SkillIcon = ({ name, color }: { name: string; color: string }) => {
     "Laravel": "laravel",
     "Python": "python",
     "MySQL": "mysql",
+    "MariaDB": "mariadb",
     "MongoDB": "mongodb",
     "VS Code": "visualstudiocode",
     "Cursor": "cursor",
@@ -33,10 +36,14 @@ const SkillIcon = ({ name, color }: { name: string; color: string }) => {
     "GitHub": "github",
     "Java": "java",
     "Power BI": "powerbi",
+    "Excel": "microsoftexcel",
+    "Pandas": "pandas",
+    "Jupyter": "jupyter",
     "XML": "xml",
     "D3.js": "d3dotjs",
     "SQL": "mysql",
-    "Windsurf": "windsurf"
+    "Windsurf": "windsurf",
+    "Docker": "docker"
   };
 
   const slug = slugMap[name] || name.toLowerCase().replace(/\s+/g, '');
@@ -120,9 +127,10 @@ const Skills: React.FC<SkillsProps> = ({ lang }) => {
       subtitle: "Maîtrise Technique",
       proficiency: "Maîtrise",
       categories: {
+        fullstack: "Fullstack",
         frontend: "Frontend",
         backend: "Backend & Système",
-        tool: "Outils & Data"
+        data: "Data & Outils"
       }
     },
     en: {
@@ -130,9 +138,10 @@ const Skills: React.FC<SkillsProps> = ({ lang }) => {
       subtitle: "Technical Proficiency",
       proficiency: "Proficiency",
       categories: {
+        fullstack: "Fullstack",
         frontend: "Frontend",
         backend: "Backend & Systems",
-        tool: "Tools & Data"
+        data: "Data & Tools"
       }
     }
   }[lang];
@@ -152,7 +161,7 @@ const Skills: React.FC<SkillsProps> = ({ lang }) => {
         </div>
 
         <div className="space-y-16">
-          {(['frontend', 'backend', 'tool'] as const).map(cat => (
+          {(['fullstack', 'frontend', 'backend', 'data'] as const).map(cat => (
             <div key={cat} className="space-y-8">
               <div className="flex items-center space-x-6">
                 <h4 className="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest whitespace-nowrap">

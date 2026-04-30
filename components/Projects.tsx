@@ -1,13 +1,8 @@
 
-import React, { useState, useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Language } from '../types';
 import { PROJECTS, SKILLS } from '../constants';
 import { ExternalLink, Github, Filter } from 'lucide-react';
-import LaraShopDemo from './LaraShopDemo';
-import TaskFlowDemo from './TaskFlowDemo';
-import DataSpyDemo from './DataSpyDemo';
-import DevSyncDemo from './DevSyncDemo';
-import PaymentGateDemo from './PaymentGateDemo';
 
 interface ProjectsProps {
   lang: Language;
@@ -15,11 +10,6 @@ interface ProjectsProps {
 
 const Projects: React.FC<ProjectsProps> = ({ lang }) => {
   const [selectedFilter, setSelectedFilter] = useState<string>('All');
-  const [showLaraDemo, setShowLaraDemo] = useState(false);
-  const [showTaskFlowDemo, setShowTaskFlowDemo] = useState(false);
-  const [showDataSpyDemo, setShowDataSpyDemo] = useState(false);
-  const [showDevSyncDemo, setShowDevSyncDemo] = useState(false);
-  const [showPaymentGateDemo, setShowPaymentGateDemo] = useState(false);
 
   const t = {
     fr: {
@@ -58,18 +48,6 @@ const Projects: React.FC<ProjectsProps> = ({ lang }) => {
   const getTechColor = (techName: string) => {
     const skill = SKILLS.find(s => s.name.toLowerCase() === techName.toLowerCase());
     return skill ? skill.color : '#3b82f6';
-  };
-
-  const handleDemoClick = (e: React.MouseEvent, projectId: number) => {
-    // Intercept demo clicks for projects with interactive simulations
-    if ([1, 2, 3, 4, 5].includes(projectId)) {
-      e.preventDefault();
-      if (projectId === 1) setShowTaskFlowDemo(true);
-      if (projectId === 2) setShowLaraDemo(true);
-      if (projectId === 3) setShowDataSpyDemo(true);
-      if (projectId === 4) setShowDevSyncDemo(true);
-      if (projectId === 5) setShowPaymentGateDemo(true);
-    }
   };
 
   return (
@@ -172,9 +150,8 @@ const Projects: React.FC<ProjectsProps> = ({ lang }) => {
                   {project.demo && (
                     <a 
                       href={project.demo}
-                      target={([1, 2, 3, 4, 5].includes(project.id)) ? "_self" : "_blank"}
+                      target="_self"
                       rel="noopener noreferrer"
-                      onClick={(e) => handleDemoClick(e, project.id)}
                       className="flex items-center px-6 py-3 rounded-xl bg-blue-600 text-white text-sm font-bold hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/30 transition-all transform hover:-translate-y-1 group/btn"
                     >
                       {t.demo} 
@@ -194,21 +171,6 @@ const Projects: React.FC<ProjectsProps> = ({ lang }) => {
         )}
       </div>
 
-      {showLaraDemo && (
-        <LaraShopDemo lang={lang} onClose={() => setShowLaraDemo(false)} />
-      )}
-      {showTaskFlowDemo && (
-        <TaskFlowDemo lang={lang} onClose={() => setShowTaskFlowDemo(false)} />
-      )}
-      {showDataSpyDemo && (
-        <DataSpyDemo lang={lang} onClose={() => setShowDataSpyDemo(false)} />
-      )}
-      {showDevSyncDemo && (
-        <DevSyncDemo lang={lang} onClose={() => setShowDevSyncDemo(false)} />
-      )}
-      {showPaymentGateDemo && (
-        <PaymentGateDemo lang={lang} onClose={() => setShowPaymentGateDemo(false)} />
-      )}
     </section>
   );
 };

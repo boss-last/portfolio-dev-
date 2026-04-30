@@ -13,7 +13,7 @@ export interface Project {
 
 export interface Skill {
   name: string;
-  category: 'frontend' | 'backend' | 'tool';
+  category: 'fullstack' | 'frontend' | 'backend' | 'data';
   icon: string;
   color: string;
   level: number; // 0 to 100
