@@ -4,62 +4,62 @@ import { Project, Skill } from './types';
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: { fr: "Plateforme SaaS Next.js", en: "Next.js SaaS Platform" },
+    title: { fr: "Plateforme E-commerce Full-Stack", en: "Full-Stack E-commerce Platform" },
     description: { 
-      fr: "Une application SaaS moderne utilisant Next.js pour le SEO et la performance, avec une base de données MongoDB et une interface stylisée avec Tailwind CSS.", 
-      en: "A modern SaaS application using Next.js for SEO and performance, with a MongoDB database and a UI styled with Tailwind CSS." 
+      fr: "Une plateforme de commerce électronique complète avec un backend robuste et une interface utilisateur réactive. Gestion des produits, des commandes et des utilisateurs.", 
+      en: "A comprehensive e-commerce platform with a robust backend and a responsive user interface. Management of products, orders, and users." 
     },
-    tech: ["Next.js", "React.js", "Tailwind CSS", "TypeScript", "MongoDB"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-    github: "https://github.com",
+    tech: ["React.js", "Node.js", "Express.js", "MySQL"],
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1200",
+    github: "https://github.com/boss-last/ecommerce-fullstack",
     demo: "#"
   },
   {
     id: 2,
-    title: { fr: "E-commerce Laravel Expert", en: "Laravel E-commerce Expert" },
+    title: { fr: "Application de Gestion de Projet", en: "Project Management Application" },
     description: { 
-      fr: "Système de vente en ligne complet développé avec Laravel et PHP. Interface responsive avec Bootstrap et interactions dynamiques via jQuery.", 
-      en: "Complete online sales system developed with Laravel and PHP. Responsive interface with Bootstrap and dynamic interactions via jQuery." 
+      fr: "Système de gestion de projet collaboratif permettant le suivi des tâches, la gestion des équipes et la génération de rapports d'avancement.", 
+      en: "Collaborative project management system enabling task tracking, team management, and progress report generation." 
     },
-    tech: ["Laravel", "PHP", "SQL", "Bootstrap", "jQuery"],
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1200",
-    github: "https://github.com",
+    tech: ["Angular", "Node.js", "Express.js", "MariaDB"],
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+    github: "https://github.com/boss-last/project-management-app",
     demo: "#"
   },
   {
     id: 3,
-    title: { fr: "Système d'Analyse de Données", en: "Data Analysis System" },
+    title: { fr: "Portail d'Entreprise Laravel", en: "Laravel Enterprise Portal" },
     description: { 
-      fr: "Application de traitement de données massives combinant Java pour la robustesse du backend et Python pour l'analyse statistique avancée et le machine learning.", 
-      en: "Massive data processing application combining Java for backend robustness and Python for advanced statistical analysis and machine learning." 
+      fr: "Un portail d'entreprise sur mesure avec des fonctionnalités avancées d'authentification, de gestion de contenu et d'API RESTful.", 
+      en: "A custom enterprise portal with advanced authentication features, content management, and RESTful APIs." 
     },
-    tech: ["Java", "Python", "SQL", "Node.js", "Git"],
+    tech: ["Laravel", "PHP", "MySQL", "React.js"],
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    github: "https://github.com",
+    github: "https://github.com/boss-last/laravel-enterprise-portal",
     demo: "#"
   },
   {
     id: 4,
-    title: { fr: "Real-time Dev Tool", en: "Real-time Dev Tool" },
+    title: { fr: "Analyse des Ventes Superstore", en: "Superstore Sales Analysis" },
     description: { 
-      fr: "Outil de collaboration en temps réel pour développeurs utilisant Node.js et TypeScript. Intégration fluide avec Git et GitHub pour le suivi des versions.", 
-      en: "Real-time collaboration tool for developers using Node.js and TypeScript. Seamless integration with Git and GitHub for version tracking." 
+      fr: "Nettoyage et analyse exploratoire des données de vente d'un supermarché. Découverte de tendances et export de rapports détaillés.", 
+      en: "Cleaning and exploratory data analysis of supermarket sales data. Discovering trends and exporting detailed reports." 
     },
-    tech: ["Node.js", "TypeScript", "JavaScript", "Git", "GitHub"],
+    tech: ["Python", "Pandas", "Jupyter", "Excel"],
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    github: "https://github.com",
+    github: "https://github.com/boss-last/superstore-sales-analysis",
     demo: "#"
   },
   {
     id: 5,
-    title: { fr: "Passerelle de Paiement Stripe", en: "Stripe Payment Gateway" },
+    title: { fr: "Dashboard d'Analyse Marketing", en: "Marketing Analysis Dashboard" },
     description: { 
-      fr: "Intégration complète d'une passerelle de paiement sécurisée utilisant Stripe, PHP et SQL. Interface utilisateur optimisée avec HTML5 et CSS3.", 
-      en: "Complete integration of a secure payment gateway using Stripe, PHP, and SQL. User interface optimized with HTML5 and CSS3." 
+      fr: "Création d'un tableau de bord interactif pour l'analyse du tunnel de conversion marketing, intégrant des KPI critiques et des visualisations avancées.", 
+      en: "Creation of an interactive dashboard for marketing conversion funnel analysis, integrating critical KPIs and advanced visualizations." 
     },
-    tech: ["PHP", "SQL", "HTML5", "CSS3", "Windsurf"],
+    tech: ["Power BI", "Excel", "Python"],
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=1200",
-    github: "https://github.com",
+    github: "https://github.com/boss-last/marketing-analysis-dashboard",
     demo: "#"
   }
 ];

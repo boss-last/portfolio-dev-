@@ -22,9 +22,8 @@ const About: React.FC<AboutProps> = ({ lang }) => {
     }
   }[lang];
 
-  // URL d'image haute disponibilité (Unsplash)
-  // Conseil : Pour utiliser votre propre photo, hébergez-la sur un site comme Imgur ou utilisez votre lien GitHub/LinkedIn direct
-  const profileImageUrl = "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop";
+  // URL de l'image de profil
+  const profileImageUrl = "/profile.jpg.png";
 
   return (
     <section id="about" className="py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
@@ -37,9 +36,11 @@ const About: React.FC<AboutProps> = ({ lang }) => {
               <img 
                 src={profileImageUrl}
                 alt="Bamba Amara Christian" 
-                className="w-full h-full object-cover transition-all duration-700"
+                className="w-full h-full object-cover grayscale-[10%] group-hover:grayscale-0 transition-all duration-700"
+                style={{ objectPosition: 'center 20%' }}
                 loading="lazy"
                 onError={(e) => {
+                  // Fallback : Si l'image Unsplash échoue, on génère un avatar stylisé
                   (e.target as HTMLImageElement).src = "https://api.dicebear.com/7.x/avataaars/svg?seed=Bamba&backgroundColor=0d8abc";
                 }}
               />

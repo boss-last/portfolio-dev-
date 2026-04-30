@@ -1,0 +1,39 @@
+// =====================================================================
+// DAX measure library — Marketing Analysis Dashboard
+// =====================================================================
+
+Total Spend         := SUM ( FactSpend[amount] )
+Total Revenue       := SUM ( FactConversion[revenue] )
+Total Impressions   := SUM ( FactSpend[impressions] )
+Total Clicks        := SUM ( FactSpend[clicks] )
+Conversions         := COUNTROWS ( FactConversion )
+
+CTR                 := DIVIDE ( [Total Clicks], [Total Impressions] )
+CPC                 := DIVIDE ( [Total Spend], [Total Clicks] )
+CPA                 := DIVIDE ( [Total Spend], [Conversions] )
+ROAS                := DIVIDE ( [Total Revenue], [Total Spend] )
+ROI %               := DIVIDE ( [Total Revenue] - [Total Spend], [Total Spend] )
+
+Conversion Rate     :=
+    DIVIDE (
+        [Conversions],
+        DISTINCTCOUNT ( FactConversion[session_id] )
+    )
+
+CAC :=
+    DIVIDE (
+        [Total Spend],
+        CALCULATE (
+            DISTINCTCOUNT ( DimCustomer[customer_id] ),
+            DimCustomer[is_new_customer] = TRUE ()
+        )
+    )
+
+YoY Spend % :=
+VAR Prev = CALCULATE ( [Total Spend], SAMEPERIODLASTYEAR ( DimDate[Date] ) )
+RETURN DIVIDE ( [Total Spend] - Prev, Prev )
+
+Funnel Drop-off % :=
+VAR This = [Conversions]
+VAR Prev = CALCULATE ( [Conversions], PREVIOUS ( DimFunnelStep[step_order] ) )
+RETURN 1 - DIVIDE ( This, Prev )
