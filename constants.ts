@@ -66,10 +66,10 @@ export const PROJECTS: Project[] = [
 
 export const SKILLS: Skill[] = [
   // Fullstack (architecture, APIs, workflow)
-  { name: "TypeScript", category: "fullstack", color: "#3178C6", icon: "typescript", level: 92 },
-  { name: "Node.js", category: "fullstack", color: "#339933", icon: "nodedotjs", level: 88 },
-  { name: "Express.js", category: "fullstack", color: "#000000", icon: "express", level: 85 },
-  { name: "Git", category: "fullstack", color: "#F05032", icon: "git", level: 92 },
+  { name: "TypeScript", category: "fullstack", color: "#3178C6", icon: "typescript", level: 77 },
+  { name: "Node.js", category: "fullstack", color: "#339933", icon: "nodedotjs", level: 80 },
+  { name: "Express.js", category: "fullstack", color: "#000000", icon: "express", level: 80 },
+  { name: "Git", category: "fullstack", color: "#F05032", icon: "git", level: 85 },
 
   // Frontend
   { name: "HTML5", category: "frontend", color: "#E34F26", icon: "html5", level: 100 },
@@ -77,28 +77,18 @@ export const SKILLS: Skill[] = [
   { name: "JavaScript", category: "frontend", color: "#F7DF1E", icon: "javascript", level: 95 },
   { name: "Angular", category: "frontend", color: "#0F0F11", icon: "angular", level: 95 },
   { name: "React.js", category: "frontend", color: "#61DAFB", icon: "react", level: 98 },
-  { name: "Vue.js", category: "frontend", color: "#4FC08D", icon: "vuedotjs", level: 95 },
   { name: "Next.js", category: "frontend", color: "#000000", icon: "nextdotjs", level: 90 },
   { name: "Tailwind CSS", category: "frontend", color: "#06B6D4", icon: "tailwindcss", level: 95 },
-  { name: "Bootstrap", category: "frontend", color: "#7952B3", icon: "bootstrap", level: 90 },
-  { name: "jQuery", category: "frontend", color: "#0769AD", icon: "jquery", level: 85 },
-
-  // Backend
-  { name: "Python", category: "backend", color: "#3776AB", icon: "python", level: 95 },
-  { name: "Java", category: "backend", color: "#007396", icon: "java", level: 80 },
-  { name: "PHP", category: "backend", color: "#777BB4", icon: "php", level: 85 },
+  
+  // Backend & Bases de données
+  { name: "Django", category: "backend", color: "#3776AB", icon: "django", level: 70 },
+  { name: "PHP", category: "backend", color: "#777BB4", icon: "php", level: 75 },
   { name: "Laravel", category: "backend", color: "#FF2D20", icon: "laravel", level: 85 },
-  { name: "MySQL", category: "backend", color: "#4479A1", icon: "mysql", level: 92 },
-  { name: "MariaDB", category: "backend", color: "#003545", icon: "mariadb", level: 95 },
-  { name: "MongoDB", category: "backend", color: "#47A248", icon: "mongodb", level: 88 },
+  { name: "MySQL", category: "backend", color: "#4479A1", icon: "mysql", level: 80 },
+  { name: "PostgreSQL", category: "backend", color: "#4479A1", icon: "postgresql", level: 80 },
 
   // Data & Outils
-  { name: "Power BI", category: "data", color: "#F2C811", icon: "powerbi", level: 95 },
-  { name: "Excel", category: "data", color: "#217346", icon: "microsoftexcel", level: 95 },
-  { name: "Pandas", category: "data", color: "#150458", icon: "pandas", level: 95 },
-  { name: "Jupyter", category: "data", color: "#F37626", icon: "jupyter", level: 90 },
   { name: "VS Code", category: "data", color: "#007ACC", icon: "visualstudiocode", level: 95 },
   { name: "GitHub", category: "data", color: "#181717", icon: "github", level: 95 },
-  { name: "Windsurf", category: "data", color: "#00A3E0", icon: "windsurf", level: 80 },
   { name: "Docker", category: "data", color: "#2496ED", icon: "docker", level: 85 },
 ];
