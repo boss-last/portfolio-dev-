@@ -150,7 +150,7 @@ const Projects: React.FC<ProjectsProps> = ({ lang }) => {
                   {project.demo && (
                     <a 
                       href={project.demo}
-                      target="_self"
+                      target={project.demo.startsWith("http") ? "_blank" : "_self"}
                       rel="noopener noreferrer"
                       className="flex items-center px-6 py-3 rounded-xl bg-blue-600 text-white text-sm font-bold hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/30 transition-all transform hover:-translate-y-1 group/btn"
                     >

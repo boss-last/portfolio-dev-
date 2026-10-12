@@ -61,6 +61,29 @@ export const PROJECTS: Project[] = [
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=1200",
     github: "https://github.com/boss-last/portfolio-dev-/tree/main/portfolio_projects_source/marketing-analysis-dashboard",
     demo: "/#/demo/marketing-dashboard"
+  },
+  {
+    id: 6,
+    title: { fr: "AbidjanFlow AI", en: "AbidjanFlow AI" },
+    description: {
+      fr: "Application web full-stack de visualisation du trafic urbain en temps réel, de planification d'itinéraires intelligents et d'assistance à la navigation par IA dans la métropole d'Abidjan.",
+      en: "Full-stack web app for real-time urban traffic visualization, smart route planning and AI-powered navigation assistance across the Abidjan metropolitan area."
+    },
+    tech: ["TypeScript", "React.js", "IA"],
+    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&q=80&w=1200",
+    github: "https://github.com/boss-last/AbidjanFlow-ai",
+    demo: "https://abidjanflow-ai.vercel.app"
+  },
+  {
+    id: 7,
+    title: { fr: "Athletica", en: "Athletica" },
+    description: {
+      fr: "Plateforme de sport connecté avec un backend Laravel et une application mobile Flutter.",
+      en: "Connected sports platform with a Laravel backend and a Flutter mobile app."
+    },
+    tech: ["Laravel", "PHP", "Flutter"],
+    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=1200",
+    github: "https://github.com/boss-last/athletica"
   }
 ];
 
