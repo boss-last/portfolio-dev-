@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Language } from '../types';
-import { ArrowRight, Code, Database, Layout, Sparkles } from 'lucide-react';
+import { ArrowRight, Code, Database, Download, Layout, Sparkles } from 'lucide-react';
+import { CV_URL, CV_FILENAME } from './Resume';
 
 interface HeroProps {
   lang: Language;
@@ -14,6 +15,7 @@ const Hero: React.FC<HeroProps> = ({ lang }) => {
       role: "Développeur Fullstack / Data",
       desc: "Je conçois et développe des applications web performantes et des solutions d'analyse de données robustes, alliant design moderne et puissance de traitement.",
       cta: "Voir mes projets",
+      cv: "Télécharger mon CV",
       badge: "Disponible pour de nouveaux défis"
     },
     en: {
@@ -21,6 +23,7 @@ const Hero: React.FC<HeroProps> = ({ lang }) => {
       role: "Fullstack / Data Developer",
       desc: "I design and develop high-performance web applications and robust data analysis solutions, combining modern design with processing power.",
       cta: "View My Projects",
+      cv: "Download Resume",
       badge: "Open to new opportunities"
     }
   };
@@ -71,6 +74,15 @@ const Hero: React.FC<HeroProps> = ({ lang }) => {
               >
                 {t.cta} 
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+
+              <a
+                href={CV_URL}
+                download={CV_FILENAME}
+                className="group flex items-center justify-center px-8 py-4 rounded-2xl border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white font-black transition-all active:scale-95"
+              >
+                <Download className="mr-2 w-5 h-5 group-hover:translate-y-0.5 transition-transform" />
+                {t.cv}
               </a>
               
               <div className="flex space-x-6 text-gray-400">

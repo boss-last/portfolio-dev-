@@ -16,12 +16,14 @@ const Header: React.FC<HeaderProps> = ({ lang, theme, onToggleLang, onToggleThem
       { name: "À Propos", id: "about" },
       { name: "Compétences", id: "skills" },
       { name: "Projets", id: "projects" },
+      { name: "CV", id: "cv" },
       { name: "Contact", id: "contact" },
     ],
     en: [
       { name: "About", id: "about" },
       { name: "Skills", id: "skills" },
       { name: "Projects", id: "projects" },
+      { name: "Resume", id: "cv" },
       { name: "Contact", id: "contact" },
     ]
   };
