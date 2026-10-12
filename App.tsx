@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Resume from './components/Resume';
 import ContactAssistant from './components/ContactAssistant';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -55,6 +56,7 @@ const App: React.FC = () => {
             <About lang={lang} />
             <Skills lang={lang} />
             <Projects lang={lang} />
+            <Resume lang={lang} />
             <ContactAssistant lang={lang} />
           </>
         )}
